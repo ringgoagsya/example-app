@@ -84,10 +84,10 @@
                                                     {{ $pelayanan->status }}
                                                 </td>
                                                 <td>
-                                                    {{ $pelayanan->waktu_mulai }}
+                                                    {{ Carbon\Carbon::parse($pelayanan->waktu_mulai)->format('H:i') }}
                                                 </td>
                                                 <td>
-                                                    {{ $pelayanan->waktu_selesai }}
+                                                    {{ Carbon\Carbon::parse($pelayanan->waktu_selesai)->format('H:i') }}
                                                 </td>
                                                 <td>
                                                     {{ $pelayanan->master_petugas->nama_petugas }}

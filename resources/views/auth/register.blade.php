@@ -3,11 +3,9 @@
 @section('content')
     <div class="row">
         @if (session('success'))
-            <div id="myCard" class="alert alert-success col-md-10 col-10" style="margin-left:10px">
+            <div id="myCard" class="alert alert-success col-md-10" style="margin-left:10px">
                 <p style="color: white">
-                    <b>
-                        {{ session('success') }}
-                    </b>
+                    {{ session('success') }}
                 </p>
             </div>
         @endif
@@ -104,12 +102,10 @@
 @endsection
 @section('script')
     <script>
-        // Menggunakan jQuery untuk menunggu dokumen siap
         $(document).ready(function() {
-            // Menunggu 1 menit (60.000 milidetik) sebelum menyembunyikan card
             setTimeout(function() {
                 $("#myCard").fadeOut(500); // Menghilangkan card dalam 0,5 detik
-            }, 1000); // 60.000 milidetik (1 menit)
+            }, 6000); // 60.000 milidetik (1 menit)
         });
     </script>
 @endsection
