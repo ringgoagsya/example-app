@@ -11,7 +11,7 @@
                             <p class="card-category">data transaksi</p>
                         </div>
                         <div class="col-md-12 col-12 text-right">
-                            <form role="form" method="post" action="{{ route('registrasi.filter', [$now]) }}"
+                            <form role="form" method="post" action="{{ route('pelayanan.filter', [$now]) }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 @method('post')

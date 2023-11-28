@@ -26,7 +26,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" id="datatable">
                                     <thead class=" text-primary">
                                         <th>No</th>
                                         <th>NO. REGISTRASI</th>
@@ -182,4 +182,23 @@
             </div>
         </div>
     @endforeach
+@endsection
+@section('script')
+    <script>
+        $(document).ready(function() {
+
+            var Datatable = $('#datatable').DataTable({
+
+                buttons: ['print', 'excel'],
+                dom: "<'row'<'col-md-3'l><'col-md-5 btn-sm'B><'col-md-4'f>>" +
+                    "<'row'<'col-md-12'tr>>" +
+                    "<'row'<'col-md-5'i><'col-md-7'p>>",
+                lengthMenu: [
+                    [25, 50, 100, -1],
+                    [25, 50, 100, "All"]
+                ]
+            });
+
+        });
+    </script>
 @endsection
